@@ -1,9 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function StatisticTitle(props) {
-  // const { title } = props;
-  console.log(props);
-  return <StatisticTitle></StatisticTitle>;
+  const { title } = props;
+  return <h1>{title}</h1>;
 }
 
 export default StatisticTitle;
+
+StatisticTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+};
