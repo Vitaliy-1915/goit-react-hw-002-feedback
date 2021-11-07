@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import s from '../FeedbackButton/FeedbackButton.module.css';
 
 function FeedbackButton(props) {
   // console.log(props);
@@ -6,7 +8,7 @@ function FeedbackButton(props) {
   const buttons = Object.keys(options);
   // console.log(Object.keys(options));
   return (
-    <div>
+    <div className={s.buttons}>
       {buttons.map(button => (
         <button key={button} type="button" onClick={() => onIncrement(button)}>
           {button}
@@ -17,3 +19,8 @@ function FeedbackButton(props) {
 }
 
 export default FeedbackButton;
+
+FeedbackButton.propTypes = {
+  options: PropTypes.object.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+};

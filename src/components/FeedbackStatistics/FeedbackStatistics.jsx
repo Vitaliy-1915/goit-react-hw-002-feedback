@@ -13,6 +13,7 @@ export class FeedbackStatistics extends Component {
   };
 
   handleIncrement = btnOnClick => {
+    // console.log(btnOnClick);
     this.setState(prevState => ({
       [btnOnClick]: prevState[btnOnClick] + 1,
     }));
